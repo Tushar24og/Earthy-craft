@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="w-full border-b border-gray-200 bg-white">
+  <div class="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="asets/Remove background project.png" alt="Brand Logo" class="h-20 w-auto object-contain">
+    </div>
+
+    <!-- Center Menu -->
+    <ul class="hidden md:flex items-center space-x-8 text-sm tracking-widest font-medium text-gray-700">
+      <li class="text-red-600 relative">
+        CLEARANCE
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] px-2 py-[2px] rounded-full">
+          NEW
+        </span>
+      </li>
+      <li class="hover:text-black cursor-pointer">ABOUT US</li>
+      <li class="hover:text-black cursor-pointer">SHOP ALL</li>
+      <li class="hover:text-black cursor-pointer">LUXE</li>
+      <li class="hover:text-black cursor-pointer">TRADE</li>
+      <li class="hover:text-black cursor-pointer">GIFTING</li>
+    </ul>
+
+    <!-- Right Icons -->
+    <div class="flex items-center space-x-6 text-gray-700 text-lg">
+      <i class="fas fa-search cursor-pointer hover:text-black"></i>
+
+      <div class="relative cursor-pointer">
+        <i class="fas fa-user"></i>
+      </div>
+
+      <div class="relative cursor-pointer">
+        <i class="fas fa-heart"></i>
+        <span class="absolute -top-2 -right-2 bg-orange-500 text-white text-[10px] px-1.5 py-[1px] rounded-full">
+          0
+        </span>
+      </div>
+
+      <div class="relative cursor-pointer">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="absolute -top-2 -right-2 bg-orange-500 text-white text-[10px] px-1.5 py-[1px] rounded-full">
+          0
+        </span>
+      </div>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO SLIDER START -->
+<section class="relative w-full overflow-hidden">
+  
+  <div class="slider relative w-full h-[80vh]">
+
+    <!-- Slides -->
+    <div class="slides flex transition-transform duration-700 ease-in-out">
+
+      <div class="min-w-full h-[80vh] relative">
+        <img src="asets/Whisk_48af6794b200fe087334239fb265963ddr.jpeg" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <h2 class="text-white text-4xl md:text-6xl font-light tracking-widest">
+            Handcrafted Elegance
+          </h2>
+        </div>
+      </div>
+
+      <div class="min-w-full h-[80vh] relative">
+        <img src="asets/Whisk_8982d9940ed95628aa74840b27750303dr.jpeg" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <h2 class="text-white text-4xl md:text-6xl font-light tracking-widest">
+            Earthy Craft Collection
+          </h2>
+        </div>
+      </div>
+
+      <div class="min-w-full h-[80vh] relative">
+        <img src="asets/Whisk_b4e74af3e2fadd3a6a6482a29d7f6a96dr.jpeg" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <h2 class="text-white text-4xl md:text-6xl font-light tracking-widest">
+            Timeless Ceramic Art
+          </h2>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button id="prev" class="absolute top-1/2 left-5 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full shadow">
+      ❮
+    </button>
+    <button id="next" class="absolute top-1/2 right-5 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full shadow">
+      ❯
+    </button>
+
+    <!-- Dots -->
+    <div class="absolute bottom-5 w-full flex justify-center gap-3">
+      <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer"></span>
+      <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer"></span>
+      <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer"></span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- FEATURES SECTION -->
+<section class="py-20 bg-[#f6f4f1] text-center">
+
+  <!-- Top Heading -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl tracking-[0.3em] font-light text-gray-800">
+      SHAPE YOUR STORY, SAFELY
+    </h2>
+    <a href="#" class="text-sm tracking-widest underline mt-4 inline-block text-gray-600 hover:text-black transition">
+      LEARN MORE
+    </a>
+  </div>
+
+  <!-- Features Grid -->
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-14">
+
+    <!-- Item -->
+    <div class="flex flex-col items-center space-y-4">
+      <i class="fa-solid fa-leaf text-5xl text-[#9c4f2c]"></i>
+      <p class="text-gray-700 text-lg">100% Bone Ash Free</p>
+    </div>
+
+    <div class="flex flex-col items-center space-y-4">
+      <i class="fa-solid fa-rotate text-5xl text-[#9c4f2c]"></i>
+      <p class="text-gray-700 text-lg">100% Lead Free</p>
+    </div>
+
+    <div class="flex flex-col items-center space-y-4">
+      <i class="fa-solid fa-gem text-5xl text-[#9c4f2c]"></i>
+      <p class="text-gray-700 text-lg">Professional Glazed</p>
+    </div>
+
+    <div class="flex flex-col items-center space-y-4">
+      <i class="fa-solid fa-microchip text-5xl text-[#9c4f2c]"></i>
+      <p class="text-gray-700 text-lg text-center">
+        Microwave & Dishwasher Safe
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center space-y-4">
+      <i class="fa-solid fa-hand-holding-heart text-5xl text-[#9c4f2c]"></i>
+      <p class="text-gray-700 text-lg">Promoting Local Artisans</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FEATURED COLLECTIONS SECTION -->
+<section class="py-20 bg-[#f6f4f1]">
+
+  <!-- Section Title -->
+  <div class="text-center mb-16">
+    <h2 class="text-2xl md:text-3xl tracking-[0.4em] font-light text-gray-800">
+      FEATURED COLLECTIONS
+    </h2>
+  </div>
+
+  <!-- Grid -->
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- Item 1 -->
+    <div class="group cursor-pointer text-center">
+      <div class="overflow-hidden">
+        <img src="asets/Gemini_Generated_Image_wfoo8vwfoo8vwfoo.png" 
+             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
+      </div>
+      <h3 class="mt-6 text-lg text-gray-800">Bowls</h3>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="group cursor-pointer text-center">
+      <div class="overflow-hidden">
+        <img src="asets/mugs.jpg" 
+             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
+      </div>
+      <h3 class="mt-6 text-lg text-gray-800">Mugs</h3>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="group cursor-pointer text-center">
+      <div class="overflow-hidden">
+        <img src="asets/jar.jpg" 
+             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
+      </div>
+      <h3 class="mt-6 text-lg text-gray-800">Jars</h3>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="group cursor-pointer text-center">
+      <div class="overflow-hidden">
+        <img src="asets/mug and saucer.jpg" 
+             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
+      </div>
+      <h3 class="mt-6 text-lg text-gray-800">Mug with Saucer</h3>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+  const slides = document.querySelector(".slides");
+  const dots = document.querySelectorAll(".dot");
+  const totalSlides = dots.length;
+  let index = 0;
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("bg-white"));
+    dots.forEach(dot => dot.classList.add("bg-white/50"));
+    dots[index].classList.remove("bg-white/50");
+    dots[index].classList.add("bg-white");
+  }
+
+  document.getElementById("next").onclick = () => {
+    index = (index + 1) % totalSlides;
+    updateSlider();
+  };
+
+  document.getElementById("prev").onclick = () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  };
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlider();
+    });
+  });
+
+  // Auto Slide Every 4 Seconds
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    updateSlider();
+  }, 4000);
+</script>
+
+</body>
+</html>
