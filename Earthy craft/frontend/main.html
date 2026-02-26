@@ -3,256 +3,319 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxury Navbar</title>
+  <title>Earthy Craft | Handcrafted Elegance</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background-color: #fdfcfb; overflow-x: hidden; }
+    h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+    
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0; height: 1px;
+      bottom: -4px; left: 0;
+      background-color: #9c4f2c;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Mobile Menu Overlay */
+    #mobile-menu {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .menu-open { transform: translateX(0) !important; }
+  </style>
 </head>
-<body>
+<body class="text-gray-800">
 
-<!-- Navbar -->
-<nav class="w-full border-b border-gray-200 bg-white">
-  <div class="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between">
 
-    <!-- Logo -->
-    <div class="flex items-center">
-      <img src="asets/Remove background project.png" alt="Brand Logo" class="h-20 w-auto object-contain">
-    </div>
+  <!-- Loader -->
+<div id="loader"
+     class="fixed inset-0 flex items-center justify-center 
+            bg-white z-50 transition-opacity duration-500">
 
-    <!-- Center Menu -->
-    <ul class="hidden md:flex items-center space-x-8 text-sm tracking-widest font-medium text-gray-700">
-      <li class="text-red-600 relative">
-        CLEARANCE
-        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] px-2 py-[2px] rounded-full">
-          NEW
-        </span>
-      </li>
-      <li class="hover:text-black cursor-pointer">ABOUT US</li>
-      <li class="hover:text-black cursor-pointer">SHOP ALL</li>
-      <li class="hover:text-black cursor-pointer">LUXE</li>
-      <li class="hover:text-black cursor-pointer">TRADE</li>
-      <li class="hover:text-black cursor-pointer">GIFTING</li>
+  <img src="asets/motion2Fast_Cute_animated_loop_of_tea_being_poured_into_a_past_0.gif" alt="Loading..."
+       class="w-32 h-32">
+</div>
+
+
+<div class="bg-[#9c4f2c] text-white text-[9px] md:text-[10px] tracking-[0.2em] py-2 text-center uppercase px-4">
+  Free Shipping on Artful Objects Over ₹999
+</div>
+
+<nav class="sticky top-0 z-50 w-full border-b border-gray-100 glass">
+  <div class="max-w-[1600px] mx-auto px-4 md:px-8 py-4 md:py-5 flex items-center justify-between">
+    
+    <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+      <i class="fa-solid fa-bars text-xl"></i>
+    </button>
+
+    <ul class="hidden lg:flex items-center space-x-10 text-[11px] tracking-[0.2em] font-medium uppercase">
+      <li><a href="#" class="nav-link text-red-700 font-bold">Clearance</a></li>
+      <li><a href="#" class="nav-link">Shop All</a></li>
+      <li><a href="#" class="nav-link">Luxe</a></li>
     </ul>
 
-    <!-- Right Icons -->
-    <div class="flex items-center space-x-6 text-gray-700 text-lg">
-      <i class="fas fa-search cursor-pointer hover:text-black"></i>
-
-      <div class="relative cursor-pointer">
-        <i class="fas fa-user"></i>
-      </div>
-
-      <div class="relative cursor-pointer">
-        <i class="fas fa-heart"></i>
-        <span class="absolute -top-2 -right-2 bg-orange-500 text-white text-[10px] px-1.5 py-[1px] rounded-full">
-          0
-        </span>
-      </div>
-
-      <div class="relative cursor-pointer">
-        <i class="fas fa-shopping-bag"></i>
-        <span class="absolute -top-2 -right-2 bg-orange-500 text-white text-[10px] px-1.5 py-[1px] rounded-full">
-          0
-        </span>
-      </div>
+    <div class="absolute left-1/2 -translate-x-1/2">
+      <img src="asets/Remove background project.png" alt="Logo" class="h-12 md:h-20 w-auto hover:opacity-80 transition cursor-pointer">
     </div>
 
+    <div class="flex items-center space-x-4 md:space-x-8">
+      <div class="hidden md:flex items-center space-x-5 text-[10px] tracking-[0.2em] font-medium uppercase border-r border-gray-200 pr-8">
+        <a href="login.html" class="hover:text-[#9c4f2c] transition">Login</a>
+        <span class="text-gray-300">/</span>
+        <a href="signup.html" class="hover:text-[#9c4f2c] transition">Sign Up</a>
+      </div>
+    </div>
   </div>
 </nav>
-<!-- HERO SLIDER START -->
-<section class="relative w-full overflow-hidden">
+
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full lg:hidden">
+  <div class="p-6">
+    <div class="flex justify-end">
+      <button id="close-btn" class="text-2xl text-gray-500">&times;</button>
+    </div>
+    <ul class="mt-12 space-y-8 text-center text-sm tracking-[0.3em] font-medium uppercase">
+      <li><a href="#" class="block text-red-700 font-bold">Clearance</a></li>
+      <li><a href="#" class="block">Shop All</a></li>
+      <li><a href="#" class="block">Luxe</a></li>
+      <li><hr class="w-10 mx-auto border-gray-200"></li>
+      <li><a href="login.html" class="block">Login</a></li>
+      <li><a href="signup.html" class="block">Sign Up</a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="relative h-[80vh] md:h-[90vh] overflow-hidden bg-black">
+  <div class="slides flex h-full transition-transform duration-1000 ease-in-out">
+    <div class="min-w-full h-full relative">
+      <img src="asets/Whisk_48af6794b200fe087334239fb265963ddr.jpeg" class="w-full h-full object-cover opacity-80" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+        <span class="text-white text-[10px] tracking-[0.5em] uppercase mb-4">Handmade in India</span>
+        <h2 class="text-white text-4xl md:text-8xl font-light serif mb-8">The Earthy Collection</h2>
+        <button class="px-8 py-3 border border-white text-white text-[10px] tracking-widest hover:bg-white hover:text-black transition duration-500 uppercase">Explore Now</button>
+      </div>
+    </div>
+    <div class="min-w-full h-full relative">
+        <img src="asets/img2.jpeg" class="w-full h-full object-cover opacity-80" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <h2 class="text-white text-4xl md:text-8xl font-light serif mb-8">Timeless Ceramic Art</h2>
+          <button class="px-8 py-3 border border-white text-white text-[10px] tracking-widest hover:bg-white hover:text-black transition duration-500 uppercase">View Details</button>
+        </div>
+      </div>
+  </div>
   
-  <div class="slider relative w-full h-[80vh]">
-
-    <!-- Slides -->
-    <div class="slides flex transition-transform duration-700 ease-in-out">
-
-      <div class="min-w-full h-[80vh] relative">
-        <img src="asets/Whisk_48af6794b200fe087334239fb265963ddr.jpeg" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <h2 class="text-white text-4xl md:text-6xl font-light tracking-widest">
-            Handcrafted Elegance
-          </h2>
-        </div>
-      </div>
-
-      <div class="min-w-full h-[80vh] relative">
-        <img src="asets/Whisk_8982d9940ed95628aa74840b27750303dr.jpeg" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <h2 class="text-white text-4xl md:text-6xl font-light tracking-widest">
-            Earthy Craft Collection
-          </h2>
-        </div>
-      </div>
-
-      <div class="min-w-full h-[80vh] relative">
-        <img src="asets/Whisk_b4e74af3e2fadd3a6a6482a29d7f6a96dr.jpeg" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <h2 class="text-white text-4xl md:text-6xl font-light tracking-widest">
-            Timeless Ceramic Art
-          </h2>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Navigation Buttons -->
-    <button id="prev" class="absolute top-1/2 left-5 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full shadow">
-      ❮
-    </button>
-    <button id="next" class="absolute top-1/2 right-5 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full shadow">
-      ❯
-    </button>
-
-    <!-- Dots -->
-    <div class="absolute bottom-5 w-full flex justify-center gap-3">
-      <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer"></span>
-      <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer"></span>
-      <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer"></span>
-    </div>
-
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-4">
+    <div class="dot w-8 md:w-12 h-[2px] bg-white cursor-pointer opacity-100"></div>
+    <div class="dot w-8 md:w-12 h-[2px] bg-white cursor-pointer opacity-30"></div>
   </div>
 </section>
 
-
-
-<!-- FEATURES SECTION -->
-<section class="py-20 bg-[#f6f4f1] text-center">
-
-  <!-- Top Heading -->
-  <div class="mb-16">
-    <h2 class="text-2xl md:text-3xl tracking-[0.3em] font-light text-gray-800">
-      SHAPE YOUR STORY, SAFELY
-    </h2>
-    <a href="#" class="text-sm tracking-widest underline mt-4 inline-block text-gray-600 hover:text-black transition">
-      LEARN MORE
-    </a>
+<section class="py-20 md:py-32 px-6 fade-in">
+  <div class="max-w-4xl mx-auto text-center">
+    <h3 class="text-[#9c4f2c] text-[10px] tracking-[0.4em] uppercase mb-6">Our Philosophy</h3>
+    <p class="serif text-2xl md:text-5xl leading-relaxed text-gray-700">
+      "We believe that everyday objects should be a <span class="italic">dialogue</span> between nature and the human hand."
+    </p>
+    <div class="w-16 h-px bg-gray-300 mx-auto mt-12"></div>
   </div>
-
-  <!-- Features Grid -->
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-14">
-
-    <!-- Item -->
-    <div class="flex flex-col items-center space-y-4">
-      <i class="fa-solid fa-leaf text-5xl text-[#9c4f2c]"></i>
-      <p class="text-gray-700 text-lg">100% Bone Ash Free</p>
-    </div>
-
-    <div class="flex flex-col items-center space-y-4">
-      <i class="fa-solid fa-rotate text-5xl text-[#9c4f2c]"></i>
-      <p class="text-gray-700 text-lg">100% Lead Free</p>
-    </div>
-
-    <div class="flex flex-col items-center space-y-4">
-      <i class="fa-solid fa-gem text-5xl text-[#9c4f2c]"></i>
-      <p class="text-gray-700 text-lg">Professional Glazed</p>
-    </div>
-
-    <div class="flex flex-col items-center space-y-4">
-      <i class="fa-solid fa-microchip text-5xl text-[#9c4f2c]"></i>
-      <p class="text-gray-700 text-lg text-center">
-        Microwave & Dishwasher Safe
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center space-y-4">
-      <i class="fa-solid fa-hand-holding-heart text-5xl text-[#9c4f2c]"></i>
-      <p class="text-gray-700 text-lg">Promoting Local Artisans</p>
-    </div>
-
-  </div>
-
 </section>
 
-<!-- FEATURED COLLECTIONS SECTION -->
-<section class="py-20 bg-[#f6f4f1]">
+<section class="py-16 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-4">
+      <h2 class="text-3xl md:text-4xl serif">The Collections</h2>
+      <a href="#" class="text-[10px] tracking-widest border-b border-black pb-1 hover:text-[#9c4f2c] transition uppercase">Shop All</a>
+    </div>
 
-  <!-- Section Title -->
-  <div class="text-center mb-16">
-    <h2 class="text-2xl md:text-3xl tracking-[0.4em] font-light text-gray-800">
-      FEATURED COLLECTIONS
-    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+      <div class="group relative overflow-hidden aspect-[3/4] cursor-pointer">
+        <img src="asets/mugs.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <p class="text-[9px] tracking-[0.3em] uppercase mb-1">Kitchenware</p>
+          <h3 class="text-xl md:text-2xl serif italic">Artisanal Mugs</h3>
+        </div>
+      </div>
+      <div class="group relative overflow-hidden aspect-[3/4] md:translate-y-8 cursor-pointer">
+        <img src="asets/jar.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <p class="text-[9px] tracking-[0.3em] uppercase mb-1">Storage</p>
+          <h3 class="text-xl md:text-2xl serif italic">Ceramic Jars</h3>
+        </div>
+      </div>
+      <div class="group relative overflow-hidden aspect-[3/4] cursor-pointer">
+        <img src="asets/Gemini_Generated_Image_wfoo8vwfoo8vwfoo.png" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <p class="text-[9px] tracking-[0.3em] uppercase mb-1">Dining</p>
+          <h3 class="text-xl md:text-2xl serif italic">Organic Bowls</h3>
+        </div>
+      </div>
+      <div class="group relative overflow-hidden aspect-[3/4] md:translate-y-8 cursor-pointer">
+        <img src="asets/mug and saucer.jpg" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <p class="text-[9px] tracking-[0.3em] uppercase mb-1">Essentials</p>
+          <h3 class="text-xl md:text-2xl serif italic">Saucer Sets</h3>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <!-- Grid -->
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-    <!-- Item 1 -->
-    <div class="group cursor-pointer text-center">
-      <div class="overflow-hidden">
-        <img src="asets/Gemini_Generated_Image_wfoo8vwfoo8vwfoo.png" 
-             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
-      </div>
-      <h3 class="mt-6 text-lg text-gray-800">Bowls</h3>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="group cursor-pointer text-center">
-      <div class="overflow-hidden">
-        <img src="asets/mugs.jpg" 
-             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
-      </div>
-      <h3 class="mt-6 text-lg text-gray-800">Mugs</h3>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="group cursor-pointer text-center">
-      <div class="overflow-hidden">
-        <img src="asets/jar.jpg" 
-             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
-      </div>
-      <h3 class="mt-6 text-lg text-gray-800">Jars</h3>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="group cursor-pointer text-center">
-      <div class="overflow-hidden">
-        <img src="asets/mug and saucer.jpg" 
-             class="w-full h-[380px] object-cover transition duration-500 group-hover:scale-105">
-      </div>
-      <h3 class="mt-6 text-lg text-gray-800">Mug with Saucer</h3>
-    </div>
-
-  </div>
-
 </section>
 
-<!-- SCRIPT -->
+<section class="py-20 bg-[#faf9f6]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <h3 class="text-[#9c4f2c] text-[10px] tracking-[0.5em] uppercase mb-4">The Standard</h3>
+      <h2 class="text-3xl md:text-5xl serif italic">Consciously Crafted</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-y-12 gap-x-6">
+      <div class="flex flex-col items-center text-center space-y-3">
+        <i class="fa-solid fa-leaf text-xl text-[#9c4f2c]/70"></i>
+        <p class="text-[9px] tracking-widest uppercase text-gray-500 font-medium">Bone Ash Free</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-3">
+        <i class="fa-solid fa-rotate text-xl text-[#9c4f2c]/70"></i>
+        <p class="text-[9px] tracking-widest uppercase text-gray-500 font-medium">Lead Free</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-3">
+        <i class="fa-solid fa-gem text-xl text-[#9c4f2c]/70"></i>
+        <p class="text-[9px] tracking-widest uppercase text-gray-500 font-medium">Glazed Finish</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-3">
+        <i class="fa-solid fa-microchip text-xl text-[#9c4f2c]/70"></i>
+        <p class="text-[9px] tracking-widest uppercase text-gray-500 font-medium">Microwave Safe</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-3 col-span-2 md:col-span-1">
+        <i class="fa-solid fa-hand-holding-heart text-xl text-[#9c4f2c]/70"></i>
+        <p class="text-[9px] tracking-widest uppercase text-gray-500 font-medium">Local Artisans</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-[#faf9f6]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12 fade-in">
+      <h3 class="text-[#9c4f2c] text-[10px] tracking-[0.5em] uppercase mb-4">Kind Words</h3>
+      <h2 class="text-3xl md:text-4xl serif italic">Collector's Circle</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 md:p-12 border border-stone-100 fade-in">
+        <div class="flex text-[#9c4f2c] mb-6 text-[9px] space-x-1">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="serif text-lg leading-relaxed text-gray-600 italic">"The craftsmanship is unparalleled. Each bowl feels like a piece of history."</p>
+        <p class="mt-6 text-[9px] tracking-[0.2em] uppercase font-bold text-gray-400">— Suhani Sharma</p>
+      </div>
+      <div class="bg-white p-8 md:p-12 border border-stone-100 fade-in">
+        <div class="flex text-[#9c4f2c] mb-6 text-[9px] space-x-1">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="serif text-lg leading-relaxed text-gray-600 italic">"Ordering ceramics online is usually a risk, but the packaging was perfect."</p>
+        <p class="mt-6 text-[9px] tracking-[0.2em] uppercase font-bold text-gray-400">— Gaurav Gupta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-white pt-20 pb-10 border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4 text-center md:text-left">
+      <img src="asets/Remove background project.png" alt="Logo" class="h-12 mx-auto md:mx-0 mb-6">
+      <p class="serif text-lg italic text-gray-600 mb-6">Elevating the mundane into the magnificent.</p>
+      <div class="flex justify-center md:justify-start space-x-6 text-gray-400">
+        <i class="fa-brands fa-instagram hover:text-[#9c4f2c] cursor-pointer"></i>
+        <i class="fa-brands fa-pinterest hover:text-[#9c4f2c] cursor-pointer"></i>
+        <i class="fa-brands fa-facebook-f hover:text-[#9c4f2c] cursor-pointer"></i>
+      </div>
+    </div>
+    
+    <div class="lg:col-span-2 text-center md:text-left">
+      <h4 class="text-[10px] tracking-[0.3em] uppercase mb-6 font-bold">Explore</h4>
+      <ul class="space-y-3 text-[10px] tracking-widest text-gray-500 uppercase">
+        <li><a href="#" class="hover:text-black">Our Story</a></li>
+        <li><a href="#" class="hover:text-black">Process</a></li>
+        <li><a href="#" class="hover:text-black">Journal</a></li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-6">
+      <h4 class="text-[10px] tracking-[0.3em] uppercase mb-6 font-bold text-center lg:text-left">Join the Inner Circle</h4>
+      <form class="flex flex-col sm:flex-row gap-4">
+        <input type="email" placeholder="EMAIL ADDRESS" class="flex-1 border-b border-gray-300 py-2 text-[10px] outline-none focus:border-[#9c4f2c] transition">
+        <button class="text-[10px] tracking-widest uppercase font-bold border-b border-black pb-1">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="mt-20 text-center text-[9px] tracking-[0.3em] text-gray-400 uppercase">
+    © 2026 Earthy Craft . Consciously Created.
+  </div>
+</footer>
+
 <script>
+  // Mobile Menu Logic
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => mobileMenu.classList.add('menu-open'));
+  closeBtn.addEventListener('click', () => mobileMenu.classList.remove('menu-open'));
+
+  // Slider Logic
   const slides = document.querySelector(".slides");
   const dots = document.querySelectorAll(".dot");
-  const totalSlides = dots.length;
   let index = 0;
 
   function updateSlider() {
     slides.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove("bg-white"));
-    dots.forEach(dot => dot.classList.add("bg-white/50"));
-    dots[index].classList.remove("bg-white/50");
-    dots[index].classList.add("bg-white");
+    dots.forEach((dot, i) => dot.style.opacity = i === index ? "1" : "0.3");
   }
 
-  document.getElementById("next").onclick = () => {
-    index = (index + 1) % totalSlides;
-    updateSlider();
-  };
-
-  document.getElementById("prev").onclick = () => {
-    index = (index - 1 + totalSlides) % totalSlides;
-    updateSlider();
-  };
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      index = i;
-      updateSlider();
-    });
-  });
-
-  // Auto Slide Every 4 Seconds
   setInterval(() => {
-    index = (index + 1) % totalSlides;
+    index = (index + 1) % dots.length;
     updateSlider();
-  }, 4000);
+  }, 5000);
+
+  // Scroll Reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+   window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+
+    // Fade out effect
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
+  });
 </script>
 
 </body>
